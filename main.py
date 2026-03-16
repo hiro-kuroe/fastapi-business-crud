@@ -12,6 +12,8 @@ from crud.user import get_user_by_username
 from utils.security import verify_password, get_password_hash, get_current_user
 from db.models.user import User
 from config import SECRET_KEY, ALGORITHM, ACCESS_TOKEN_EXPIRE_MINUTES
+from api.v1.tasks import router as tasks_router
+
 
 
 
@@ -24,6 +26,8 @@ def create_access_token(data: dict, expires_delta: timedelta | None = None):
 
 
 app = FastAPI()
+
+app.include_router(tasks_router)
 
 @app.on_event("startup")
 def create_demo_user():
