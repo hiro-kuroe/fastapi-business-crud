@@ -1,4 +1,4 @@
-# fastapi-business-crud
+# FastAPI-business-crud
 
 Minimal business CRUD API built with FastAPI.
 
