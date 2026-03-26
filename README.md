@@ -49,7 +49,7 @@ Build image
 
 Run container
 
-    docker run -p 8000:8000 -e SECRET_KEY=your-secret-key -e ALGORITHM=HS256 fastapi-business-crud
+    docker run -p 8000:8000 --env-file .env.sample fastapi-business-crud
 
 Swagger UI
 
